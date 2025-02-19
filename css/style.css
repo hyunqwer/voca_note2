@@ -1,0 +1,134 @@
+    /* 폰트 임포트: 필요에 따라 다른 폰트로 교체 가능 */
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+ 
+    /* 전역 스타일 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #FFC2C2, #FFE7C2);
+    font-family: 'Nanum Gothic', Arial, sans-serif;
+    margin: 0;
+}
+
+/* 헤더 및 로고 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.header img {
+  width: 70px;
+}
+
+/* 제목 스타일 */
+.title {
+  font-size: 23px;
+  font-weight: bold;
+  color: #696969;
+  margin-bottom: 12px;
+}
+
+#currentTrack {
+  font-weight: bold;
+  color: #49BBBD;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* 오디오 플레이어 컨테이너 */
+.audio_container {
+  width: 90%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 오디오 스타일 */
+audio {
+  width: 90%;
+  max-width: 460px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* 시간 표시 (추가 기능이 필요하다면 확장 가능) */
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 드롭다운 스타일 */
+select#folderSelect {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a4a4a;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 호버 및 포커스 효과 */
+select#folderSelect:hover,
+select#folderSelect:focus {
+  border-color: #49BBBD;
+  box-shadow: 0px 0px 8px rgba(73, 187, 189, 0.5);
+  outline: none;
+}
+
+/* 플레이리스트 스타일 */
+.playlist {
+  width: 85%;
+  max-height: 375px;
+  overflow-y: auto;
+  margin: 20px auto 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.playlist ul {
+  padding: 0;
+  margin: 0;
+}
+
+.playlist li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 15px;
+  color: #7C7C7C;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.2s ease;
+}
+
+.playlist li:hover {
+  background: rgba(240, 240, 240, 0.8);
+}
+
+.playlist li.active {
+  background: rgba(13, 120, 122, 0.8);
+  color: white;
+  font-weight: bold;
+}
